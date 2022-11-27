@@ -16,5 +16,6 @@ jobs:
         with:
           python-version: '3.8.0'
       - run: pip3 install Beautifulsoup4
+      - run: pip3 install xlwt
       - run: python card_downloader.py
       
