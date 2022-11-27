@@ -1,5 +1,8 @@
-name: Your Github Workflow name
+name: run_python
 on:
+  push:
+    branches:
+      - main
   schedule:
   - cron: "0/1 * * * *"
 
