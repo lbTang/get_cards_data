@@ -15,7 +15,6 @@ import json
 import urllib.parse
 import bs4
 from bs4 import BeautifulSoup
-import xlwt
 import sqlite3
 import re
 
