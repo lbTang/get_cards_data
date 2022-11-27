@@ -1,9 +1,8 @@
 name: Your Github Workflow name
 on:
-  workflow_dispatch:
   schedule:
-    # IMPORTANT: Set cron job in UTC timezone
-    - cron:  '0/30 * * * * ?'
+  - cron: "0/1 * * * *"
+
 
 jobs:
   run-python-script:
