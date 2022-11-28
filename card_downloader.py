@@ -18,6 +18,7 @@ import xlwt
 from bs4 import BeautifulSoup
 import sqlite3
 import re
+import os
 
 #定义输出结果的编码为utf-8
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')
@@ -30,6 +31,12 @@ class Robot(object):
         html = self.get_decoded_html(url)
         cards_info = self.get_info(html)
         self.connect_sqlite(cards_info)
+        path = os.listdir(os.getcwd())
+        print("当前路径:%s" % path)
+        for p in path:
+            if os.path.isdir(p):
+                print(p)
+        
 
 
     def get_decoded_html(self,url):
@@ -135,7 +142,7 @@ class Robot(object):
                 )
         con.commit()
         res = cur.execute("SELECT * FROM cards")
-        print(res.fetchall())
+        #print(res.fetchall())
         self.export_excel_from_db(res.fetchall())
 
 
