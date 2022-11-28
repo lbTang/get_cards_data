@@ -32,10 +32,7 @@ class Robot(object):
         cards_info = self.get_info(html)
         self.connect_sqlite(cards_info)
         path = os.listdir(os.getcwd())
-        print("当前路径:%s" % path)
-        for p in path:
-            if os.path.isdir(p):
-                print(p)
+        print("当前路径下文件:%s" % path)
         
 
 
