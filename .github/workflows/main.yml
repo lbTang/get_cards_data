@@ -18,7 +18,6 @@ jobs:
       - run: pip3 install Beautifulsoup4
       - run: pip3 install xlwt
       - run: python card_downloader.py
-      - name: current directory
       - run: pwd
       - run: ls -l
       - uses: actions/upload-artifact@v2
