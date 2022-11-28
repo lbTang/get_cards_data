@@ -22,8 +22,8 @@ jobs:
       - run: ls -l
       - uses: actions/upload-artifact@v2
         with:
-          name: cards_data.db
-          path: ./
+          name: cards_data
+          path: ./cards_data.db
       
 
       
