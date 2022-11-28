@@ -18,9 +18,9 @@ jobs:
       - run: pip3 install Beautifulsoup4
       - run: pip3 install xlwt
       - run: python card_downloader.py
-      - uses: actions/download-artifact@v2
+      - uses: actions/upload-artifact@v2
         with:
-          name: card_downloader.py
+          name: cards_data.db
           path: ./
 
       
