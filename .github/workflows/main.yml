@@ -18,11 +18,10 @@ jobs:
       - run: pip3 install Beautifulsoup4
       - run: pip3 install xlwt
       - run: python card_downloader.py
-      - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
-          name: cards_data.db
-          path: ~db/
+          name: card_downloader.py
+          path: ./
 
       
 
